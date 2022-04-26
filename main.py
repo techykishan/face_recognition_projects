@@ -2,8 +2,7 @@ from tkinter import*
 from tkinter import ttk
 from PIL import Image, ImageTk
 from student import Student
-
-
+import os
 
 class Face_recognition_system:
     def __init__(self, root):
@@ -127,10 +126,10 @@ class Face_recognition_system:
         img9 = img9.resize((220, 220), Image.ANTIALIAS)
         self.photoimg9 = ImageTk.PhotoImage(img9)
 
-        b7 = Button(bg_img, image=self.photoimg9, cursor="hand2")
+        b7 = Button(bg_img, image=self.photoimg9, cursor="hand2",command=self.open_img)
         b7.place(x=400, y=320, width=220, height=220)
 
-        b7_7 = Button(bg_img, text="Photos", cursor="hand2", font=(
+        b7_7 = Button(bg_img, text="Photos", cursor="hand2",command=self.open_img, font=(
             "times new roman", 15, "bold"), bg="dark blue", fg="white")
         b7_7.place(x=400, y=500, width=220, height=40)
 
@@ -161,6 +160,9 @@ class Face_recognition_system:
             "times new roman", 15, "bold"), bg="dark blue", fg="white")
         b9_9.place(x=1000, y=500, width=220, height=40)
 
+
+    def open_img(self):
+        os.startfile("data")
 
 # ********************* Functions Buttons***************
 
