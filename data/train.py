@@ -16,7 +16,7 @@ class Train:
 # for Title
         title_lbl = Label(self.root, text="Train Dataset", font=(
             "times new roman", 35, "bold"), bg="white", fg="Red")
-        title_lbl.place(x=0, y=0, width=1430, height=40)
+        title_lbl.place(x=0, y=0, width=1430, height=40) 
 
         
         img_top = Image.open(
