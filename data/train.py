@@ -12,7 +12,6 @@ class Train:
         self.root.geometry("1530x790+0+0")
         self.root.title("Face Recognition System ")
 
-
 # for Title
         title_lbl = Label(self.root, text="Train Dataset", font=(
             "times new roman", 35, "bold"), bg="white", fg="Red")
