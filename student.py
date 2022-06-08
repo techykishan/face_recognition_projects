@@ -30,8 +30,7 @@ class Student:
 
 
 # first image
-        img = Image.open(
-            "C:/Users/10 PRO BOOK/Desktop/face recognition system/images/11.jpg")
+        img = Image.open("C:/Users/10 PRO BOOK/Desktop/face recognition system/images/11.jpg")
         img = img.resize((500, 130), Image.ANTIALIAS)
         self.photoimg = ImageTk.PhotoImage(img)
 
