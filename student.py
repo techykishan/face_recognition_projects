@@ -262,14 +262,14 @@ class Student:
         teacher_entry = ttk.Entry(
             class_student_frame, textvariable=self.var_teacher, width=20, font=("times new roman", 12, "bold"))
         teacher_entry.grid(row=4, column=3, padx=6, pady=5, sticky=W)
-
+    
 # radio buttons
         self.var_radio1 = StringVar()
-        radiobtn1 = Radiobutton(class_student_frame, variable=self.var_radio1,
+        radiobtn1 = ttk.Radiobutton(class_student_frame, variable=self.var_radio1,
                                 text="Take Photo Sample", value="yes")
         radiobtn1.grid(row=6, column=0)
 
-        radiobtn2 = Radiobutton(class_student_frame, variable=self.var_radio1,
+        radiobtn2 = ttk.Radiobutton(class_student_frame, variable=self.var_radio1,
                                 text="No Photo Sample", value="No")
         radiobtn2.grid(row=6, column=1)
 

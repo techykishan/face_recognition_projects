@@ -1,8 +1,10 @@
 from tkinter import*
 from tkinter import ttk
 from PIL import Image, ImageTk
-from student import Student
 import os
+from student import Student
+from train import Train
+from face_recognition import Face_Recognition
 
 class Face_recognition_system:
     def __init__(self, root): 
@@ -71,10 +73,10 @@ class Face_recognition_system:
         img5 = img5.resize((220, 220), Image.ANTIALIAS)
         self.photoimg5 = ImageTk.PhotoImage(img5)
 
-        b2 = Button(bg_img, image=self.photoimg5, cursor="hand2")
+        b2 = Button(bg_img, image=self.photoimg5, cursor="hand2",command=self.face_data)
         b2.place(x=400, y=70, width=220, height=220)
 
-        b2_2 = Button(bg_img, text="Face Detector", cursor="hand2", font=(
+        b2_2 = Button(bg_img, text="Face Detector", cursor="hand2",command=self.face_data, font=(
             "times new roman", 15, "bold"), bg="dark blue", fg="white")
         b2_2.place(x=400, y=250, width=220, height=40)
 
@@ -113,10 +115,10 @@ class Face_recognition_system:
         img8 = img8.resize((220, 220), Image.ANTIALIAS)
         self.photoimg8 = ImageTk.PhotoImage(img8)
 
-        b6 = Button(bg_img, image=self.photoimg8, cursor="hand2")
+        b6 = Button(bg_img, image=self.photoimg8, cursor="hand2",command=self.train_data)
         b6.place(x=100, y=320, width=220, height=220)
 
-        b6_6 = Button(bg_img, text="Train Data", cursor="hand2", font=(
+        b6_6 = Button(bg_img, text="Train Data", cursor="hand2",command=self.train_data, font=(
             "times new roman", 15, "bold"), bg="dark blue", fg="white")
         b6_6.place(x=100, y=500, width=220, height=40)
 
@@ -170,6 +172,16 @@ class Face_recognition_system:
     def student_details(self):
         self.new_window = Toplevel(self.root)
         self.app = Student(self.new_window)
+
+    def train_data(self):
+        self.new_window = Toplevel(self.root)
+        self.app = Train(self.new_window)
+
+    def face_data(self):
+        self.new_window = Toplevel(self.root)
+        self.app = Face_Recognition(self.new_window)
+
+
 
 
 if __name__ == "__main__":
