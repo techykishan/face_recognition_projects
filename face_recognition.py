@@ -129,8 +129,8 @@ class Face_Recognition:
 
             if cv2.waitKey(1)==13:
                 break
-            Video_cap.release()
-            cv2.destroyAllWindows()
+        Video_cap.release()
+        cv2.destroyAllWindows()
 
 
 
